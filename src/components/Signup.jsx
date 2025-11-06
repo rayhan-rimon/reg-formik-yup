@@ -6,14 +6,23 @@ const Signup = () => {
     const [email, setEmail] = React.useState('');
     const [password, setPassword] = React.useState('');
 
-    const handleChange = (e) => {
+    const handleNameChange = (e) => {
         setName(e.target.value);
+    }
+    const handleEmailChange = (e) => {
         setEmail(e.target.value);
+    }
+    const handlePasswordChange = (e) => {
         setPassword(e.target.value);
     }
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log({ name, email, password });
+        const newUser = {
+            name,
+            email,
+            password
+        };
+        console.log(newUser);
     }
     return (
         <div>
@@ -21,15 +30,15 @@ const Signup = () => {
             <form onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="name">Name:</label>
-                    <input type="text" id="name" name="name" onChange={handleChange} />
+                    <input type="text" id="name" name="name" onChange={handleNameChange} value={name} />
                 </div>
                 <div>
                     <label htmlFor="email">Email:</label>
-                    <input type="email" id="email" name="email" onChange={handleChange} />
+                    <input type="email" id="email" name="email" onChange={handleEmailChange} value={email} />
                 </div>
                 <div>
                     <label htmlFor="password">Password:</label>
-                    <input type="password" id="password" name="password" onChange={handleChange} />
+                    <input type="password" id="password" name="password" onChange={handlePasswordChange} value={password} />
                 </div>
                 <button type="submit">Sign Up</button>
             </form>
