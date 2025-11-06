@@ -79,6 +79,7 @@ const Signup = () => {
                         name="name"
                         onChange={formik.handleChange}
                         value={formik.values.name}
+                        onBlur={formik.handleBlur}
                     />
                     {nameError}
                 </div>
@@ -91,6 +92,7 @@ const Signup = () => {
                         name="email"
                         onChange={formik.handleChange}
                         value={formik.values.email}
+                        onBlur={formik.handleBlur}
                     />
                     {emailError}
                 </div>
@@ -103,6 +105,7 @@ const Signup = () => {
                         name="password"
                         onChange={formik.handleChange}
                         value={formik.values.password}
+                        onBlur={formik.handleBlur}
                     />
                     {passwordError}
                 </div>
