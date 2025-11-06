@@ -11,9 +11,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -22,6 +24,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -39,4 +42,74 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.sign-up {
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+  color: #334155;
+  /* Darker text color */
+  font-weight: 700;
+}
+
+/* --- Input Styling (text, email, password) --- */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 70%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #cbd5e1;
+  /* Light border color */
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #1e293b;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #4f46e5;
+  /* Indigo focus color */
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+  outline: none;
+}
+
+/* --- Error Message Styling (span) --- */
+form div>span {
+  display: block;
+  margin-top: 0.5rem;
+  color: #ef4444;
+  /* Red error color */
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* --- Button Styling --- */
+button[type="submit"] {
+  width: 20%;
+  padding: 1rem;
+  background-color: #4f46e5;
+  /* Deep Indigo primary color */
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.4);
+}
+
+button[type="submit"]:hover {
+  background-color: #4338ca;
+  /* Darker indigo on hover */
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.6);
+}
+
+button[type="submit"]:active {
+  transform: translateY(1px);
+  /* Little press effect */
 }
